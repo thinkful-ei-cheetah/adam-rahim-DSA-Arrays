@@ -14,10 +14,14 @@ function main() {
   arr.push(19);
   arr.push(45);
   arr.push(10);
+  // Array { length: 6, _capacity: 12, ptr: 3 }
+
+  arr.pop();
+  arr.pop();
+  arr.pop();
+  // Array { length: 3, _capacity: 12, ptr: 3 }
 
   console.log(arr);
 }
 
 main();
-
-// Array { length: 6, _capacity: 12, ptr: 3 }
