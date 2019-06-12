@@ -103,15 +103,18 @@ function darray(array, rows, columns) {
   //on finding 0 in inner array we'll have column in j and row in i.
   //return to arr row 1 column j to delete.
   let newArray = [];
+  for (let i = 0; i < array.length; i++) {
+    for (let j = 0; j < array[i].length; j++) {
+      if (array[i][j] === 0) {
+        array[i].forEach((element, index, array) => {
+          return (array[index] = 0);
+        });
 
-  for(let i = 0; i < array.length; i++){
-   
-    for(let j = 0; j < array[i].length; j++){
-      
+        //[2,1], [4,1]
+      }
     }
-    
   }
-  return newArray;
+  return array;
 }
 
 console.log(
