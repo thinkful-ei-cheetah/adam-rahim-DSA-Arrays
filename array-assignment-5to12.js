@@ -1,10 +1,10 @@
 'use strict';
 
 //5. URLify a string
-function urlify (str){
+function urlify(str) {
   let newStr = '';
-  for(let i = 0; i< str.length; i++){
-    if(str[i] === ' '){
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === ' ') {
       i++;
       newStr = newStr.concat('%20');
     }
@@ -20,26 +20,26 @@ urlify('www.thinkful.com /tauh ida parv een');
 
 // 6. Filtering an array
 
-function arrayFilter(arr, filt){
+function arrayFilter(arr, filt) {
   let newArr = [];
-  for(let i = 0; i < arr.length; i++){
-    if(arr[i] >= filt){
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] >= filt) {
       newArr.push(arr[i]);
     }
   }
   return newArr;
 }
 
-arrayFilter([7, 6, -3, 5, -2, 1, 5,3,8], 5);
+arrayFilter([7, 6, -3, 5, -2, 1, 5, 3, 8], 5);
 
-function maxSum(arr){
+function maxSum(arr) {
   let currentSum = 0;
   let largestSum = 0;
 
-  for(let i = 0; i < arr.length; i++){
+  for (let i = 0; i < arr.length; i++) {
     currentSum += arr[i];
 
-    if(currentSum > currentSum + arr[i + 1]){
+    if (currentSum > currentSum + arr[i + 1]) {
       largestSum = currentSum;
     }
   }
@@ -49,16 +49,34 @@ function maxSum(arr){
 maxSum([4, 6, -3, 5, -2, 1]);
 
 // 8. Merge arrays
-function mergeArrays(arr1,arr2){
+function mergeArrays(arr1, arr2) {
   let newArr = [];
-  for(let i = 0; i < arr1.length; i++){
+  for (let i = 0; i < arr1.length; i++) {
     newArr.push(arr1[i]);
   }
-  for(let i = 0; i < arr2.length; i++){
+  for (let i = 0; i < arr2.length; i++) {
     newArr.push(arr2[i]);
   }
 
-  return newArr.sort((a,b) => a - b);
+  return newArr.sort((a, b) => a - b);
 }
 
 mergeArrays([1, 3, 6, 8, 11], [2, 3, 5, 8, 9, 10]);
+
+// 9. Remove Characters
+
+function removeCharacter(string, [...characters]) {
+  let newStr = '';
+
+  for (let i = 0; i < string.length; i++) {
+    let char = string[i].toLowerCase();
+    if (characters.indexOf(char) < 0) {
+      newStr = newStr + char;
+    }
+  }
+  return newStr;
+}
+
+console.log(
+  removeCharacter('Battle of the Vowels: Hawaii vs. Grozny', 'aeiou')
+);
