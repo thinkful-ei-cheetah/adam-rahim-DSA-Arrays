@@ -95,4 +95,21 @@ function products(arr) {
   return newArr;
 }
 
-console.log(products([1, 3, 9, 4]));
+products([1, 3, 9, 4]);
+
+function darray(array, rows, columns) {
+  //loop outer array.
+  //loop through inner array.
+  //on finding 0 in inner array we'll have column in j and row in i.
+  //return to arr row 1 column j to delete.
+}
+
+console.log(
+  darray([
+    [1, 0, 1, 1, 0],
+    [0, 1, 1, 1, 0],
+    [1, 1, 1, 1, 1],
+    [1, 0, 1, 1, 1],
+    [1, 1, 1, 1, 1]
+  ])
+);
