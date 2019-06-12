@@ -77,6 +77,21 @@ function removeCharacter(string, [...characters]) {
   return newStr;
 }
 
-console.log(
-  removeCharacter('Battle of the Vowels: Hawaii vs. Grozny', 'aeiou')
-);
+removeCharacter('Battle of the Vowels: Hawaii vs. Grozny', 'aeiou');
+
+// 10.
+function products(arr){
+  let newArr = [];
+
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i]){
+      newArr.push((arr[i] * arr[i + 1])/arr[i]);
+      // for(let j = 0; j < arr.length -1; i++){
+        
+      // }
+    }
+  }
+  return newArr;
+}
+
+console.log(products([1, 3, 9, 4]));
