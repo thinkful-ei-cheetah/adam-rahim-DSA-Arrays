@@ -117,26 +117,33 @@ function darray(array, rows, columns) {
   return array;
 }
 
-console.log(
-  darray([
-    [1, 0, 1, 1, 0],
-    [0, 1, 1, 1, 0],
-    [1, 1, 1, 1, 1],
-    [1, 0, 1, 1, 1],
-    [1, 1, 1, 1, 1]
-  ])
-);
+// console.log(
+//   darray([
+//     [1, 0, 1, 1, 0],
+//     [0, 1, 1, 1, 0],
+//     [1, 1, 1, 1, 1],
+//     [1, 0, 1, 1, 1],
+//     [1, 1, 1, 1, 1]
+//   ])
+// );
 
 // 12. String rotation 
 function strRotation(str1,str2){
-  let revStr = str1.split('').reverse().join('');
-
-  if(revStr === str2){
-    return true;
-  }else{
-    return false;
+  let currentStr = '';
+  for(let i = 0; i < str1.length; i++){
+    // for(let j = 0; j < str1.length; j++){
+      
+    // }
+    currentStr = currentStr + str1[i];
+    // if(currentStr === str2){
+    //   return true;
+    // }else{
+    //   return false;
+    // }
   }
+  console.log(currentStr);
+  return currentStr;
 }
 
 console.log(strRotation('amazon', 'azonma'));
-console.log(strRotation('amazon', 'nozama'));
+console.log(strRotation('amazon', 'azonam'));
