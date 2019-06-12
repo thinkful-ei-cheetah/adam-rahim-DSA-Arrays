@@ -126,3 +126,17 @@ console.log(
     [1, 1, 1, 1, 1]
   ])
 );
+
+// 12. String rotation 
+function strRotation(str1,str2){
+  let revStr = str1.split('').reverse().join('');
+
+  if(revStr === str2){
+    return true;
+  }else{
+    return false;
+  }
+}
+
+console.log(strRotation('amazon', 'azonma'));
+console.log(strRotation('amazon', 'nozama'));
