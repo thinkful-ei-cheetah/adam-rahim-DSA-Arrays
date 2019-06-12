@@ -80,16 +80,17 @@ function removeCharacter(string, [...characters]) {
 removeCharacter('Battle of the Vowels: Hawaii vs. Grozny', 'aeiou');
 
 // 10.
-function products(arr){
+function products(arr) {
   let newArr = [];
+  let value = 1;
 
-  for(let i = 0; i < arr.length; i++){
-    if(arr[i]){
-      newArr.push((arr[i] * arr[i + 1])/arr[i]);
-      // for(let j = 0; j < arr.length -1; i++){
-        
-      // }
-    }
+  for (let i = 0; i < arr.length; i++) {
+    value = value * arr[i];
+    // newArr.push(value / arr[i]);
+  }
+
+  for (let j = 0; j < arr.length; j++) {
+    newArr.push(value / arr[j]);
   }
   return newArr;
 }
