@@ -21,6 +21,13 @@ function main() {
   arr.pop();
   // Array { length: 3, _capacity: 12, ptr: 3 }
 
+  let length = arr.length;
+  for (let i = 0; i < length; i++) {
+    arr.pop();
+  }
+  arr.push('tauhida');
+  console.log(arr.get(0));
+
   console.log(arr);
 }
 
